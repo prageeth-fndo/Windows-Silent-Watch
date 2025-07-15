@@ -19,11 +19,11 @@ This project automates the process of capturing screenshots from a Windows compu
 
 | File                 | Description |
 |----------------------|-------------|
-| `screencapture.ps1`  | PowerShell script to continuously capture screenshots |
-| `uploader.ps1`       | PowerShell script to convert screenshots to video and upload to Drive |
-| `screencapture.vbs`  | VBS wrapper for silent execution of `screencapture.ps1` |
-| `uploader.vbs`       | VBS wrapper for silent execution of `uploader.ps1` |
-| `autorun_screenshot_uploader.reg` | Registry file to auto-run both scripts at login |
+| `ScreenCapture.ps1`  | PowerShell script to continuously capture screenshots |
+| `Uploader.ps1`       | PowerShell script to convert screenshots to video and upload to Drive |
+| `ScreenCapture.vbs`  | VBS wrapper for silent execution of `screencapture.ps1` |
+| `Uploader.vbs`       | VBS wrapper for silent execution of `uploader.ps1` |
+| `Autorun.reg` | Registry file to auto-run both scripts at login |
 
 ---
 
@@ -59,14 +59,14 @@ This project automates the process of capturing screenshots from a Windows compu
 
 5. **Manual Test Run**  
    - Run `screencapture.vbs` to start taking screenshots silently.
-   - Run `uploader.vbs` to trigger the upload logic (eg:- 5 AM).
+   - Run `uploader.vbs` to trigger the upload logic (at 4AM, 12PM or 8PM).
 
 ---
 
 ## 🧩 How It Works
 
 - `screencapture.ps1` captures a screenshot every 10 seconds using NirCmd and stores them as `img0001.png`, `img0002.png`, etc., in `C:\WSW\img\`.
-- `uploader.ps1` runs continuously and, at 2:00, 10:00, or 18:00, generates a video (15 fps) using FFmpeg and uploads it to Google Drive using rclone.
+- `uploader.ps1` runs continuously and, at 04:00, 12:00 or 20:00, generates a video (15 fps) using FFmpeg and uploads it to Google Drive using rclone.
 - After a successful upload, it deletes all screenshots and resets the counter.
 
 ---
@@ -76,7 +76,3 @@ This project automates the process of capturing screenshots from a Windows compu
 This tool is intended for **educational and administrative purposes** only. Please ensure you have permission before using it on any system. Unauthorized use may violate privacy laws or policies.
 
 ---
-
-## 📄 License
-
-This project is released under the MIT License. See the `LICENSE` file for details.
