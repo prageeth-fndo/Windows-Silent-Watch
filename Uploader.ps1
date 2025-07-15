@@ -17,13 +17,13 @@ while ($true) {
     $currentHour = $now.Hour
     $currentMinute = $now.Minute
 
-    # Define the hours (0, 6, 12, 18) when the script should create and upload the video
-    $runHours = @(0, 6, 12, 18)
+    # Define the hours (4AM, 12PM, 8PM) when the script should create and upload the video
+    $runHours = @(4, 12, 20)
 
     # Check if current time matches a scheduled upload hour and video for that hour hasn't already been created today
     if ($runHours -contains $currentHour -and $currentMinute -eq 0 -and $lastRunDate["$currentHour"] -ne $now.Date) {
         
-        # Create the output filename using current date and hour (e.g., 2025-07-15_06.mp4)
+        # Create the output filename using current date and hour (e.g., 2025-07-15_04.mp4)
         $outputFile = $now.ToString("yyyy-MM-dd_HH") + ".mp4"
         $outputPath = Join-Path $imgPath $outputFile
 
