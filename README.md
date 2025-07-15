@@ -65,8 +65,8 @@ This project automates the process of capturing screenshots from a Windows compu
 
 ## 🧩 How It Works
 
-- `screencapture.ps1` captures a screenshot every 10 seconds using NirCmd and stores them as `img0001.png`, `img0002.png`, etc., in `C:\WSW\img\`.
-- `uploader.ps1` runs continuously and, at 04:00, 12:00 or 20:00, generates a video (15 fps) using FFmpeg and uploads it to Google Drive using rclone.
+- `ScreenCapture.ps1` captures a screenshot every 30 seconds using NirCmd and stores them as `img0001.png`, `img0002.png`, etc., in `C:\WSW\img\`.
+- `Uploader.ps1` runs continuously and, at 04:00, 12:00 or 20:00, generates a video (15 fps) using FFmpeg and uploads it to Google Drive using rclone.
 - After a successful upload, it deletes all screenshots and resets the counter.
 
 ---
