@@ -54,12 +54,12 @@ This project automates the process of capturing screenshots from a Windows compu
    If your tools are in a different location, update the paths in the `.ps1` and `.vbs` files.
 
 4. **Enable Auto-Start at Login**  
-   - Double-click `autorun_screenshot_uploader.reg` to add the VBScript entries to the registry.
+   - Double-click `Autorun.reg` to add the VBScript entries to the registry.
    - Alternatively, use Task Scheduler to trigger the VBS scripts at login.
 
 5. **Manual Test Run**  
-   - Run `screencapture.vbs` to start taking screenshots silently.
-   - Run `uploader.vbs` to trigger the upload logic (at 4AM, 12PM or 8PM).
+   - Run `ScreenCapture.vbs` to start taking screenshots silently.
+   - Run `Uploader.vbs` to trigger the upload logic (at 4AM, 12PM or 8PM).
 
 ---
 
